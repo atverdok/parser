@@ -1,0 +1,77 @@
+2020-12-10T15:19:21.406151+0200 ERROR An error has been caught in function '<module>', process 'MainProcess' (110363), thread 'MainThread' (140385078318912):
+Traceback (most recent call last):
+
+> File "page_load_manager.py", line 121, in <module>
+    main()
+    └ <function main at 0x7fadf14c6b80>
+
+  File "page_load_manager.py", line 117, in main
+    print(page_load_manager.get(url)[:50])
+          │                 │   └ 'https://attack.mitre.org/'
+          │                 └ <function PageLoadManager.get at 0x7fadf14c6af0>
+          └ <__main__.PageLoadManager object at 0x7fadf14c8a60>
+
+  File "page_load_manager.py", line 102, in get
+    self.web_manager.load(url)
+    │    │           │    └ 'https://attack.mitre.org/'
+    │    │           └ <function PageLoadFromWeb.load at 0x7fadf14c6790>
+    │    └ <__main__.PageLoadFromWeb object at 0x7fadf14c8400>
+    └ <__main__.PageLoadManager object at 0x7fadf14c8a60>
+
+  File "page_load_manager.py", line 70, in load
+    logger.debug(
+    │      └ <function Logger.debug at 0x7fadf14c5c10>
+    └ <loguru.logger handlers=[(id=0, level=10, sink=<stderr>), (id=1, level=40, sink='error.log')]>
+
+KeyError: 'self'
+2020-12-10T15:22:55.873100+0200 ERROR An error has been caught in function '<module>', process 'MainProcess' (111033), thread 'MainThread' (140612693182272):
+Traceback (most recent call last):
+
+> File "page_load_manager.py", line 122, in <module>
+    main()
+    └ <function main at 0x7fe2f0339b80>
+
+  File "page_load_manager.py", line 118, in main
+    print(page_load_manager.get(url)[:50])
+          │                 │   └ 'https://attack.mitre.org/'
+          │                 └ <function PageLoadManager.get at 0x7fe2f0339af0>
+          └ <__main__.PageLoadManager object at 0x7fe2f033ca60>
+
+  File "page_load_manager.py", line 103, in get
+    self.web_manager.load(url)
+    │    │           │    └ 'https://attack.mitre.org/'
+    │    │           └ <function PageLoadFromWeb.load at 0x7fe2f0339790>
+    │    └ <__main__.PageLoadFromWeb object at 0x7fe2f033c400>
+    └ <__main__.PageLoadManager object at 0x7fe2f033ca60>
+
+  File "page_load_manager.py", line 71, in load
+    logger.debug(
+    │      └ <function Logger.debug at 0x7fe2f0337c10>
+    └ <loguru.logger handlers=[(id=0, level=10, sink=<stderr>), (id=1, level=40, sink='error.log')]>
+
+KeyError: 'r'
+2020-12-10T15:24:02.774453+0200 ERROR An error has been caught in function '<module>', process 'MainProcess' (111155), thread 'MainThread' (140052614301504):
+Traceback (most recent call last):
+
+> File "page_load_manager.py", line 121, in <module>
+    main()
+    └ <function main at 0x7f6088e61b80>
+
+  File "page_load_manager.py", line 117, in main
+    print(page_load_manager.get(url)[:50])
+          │                 │   └ 'https://attack.mitre.org/'
+          │                 └ <function PageLoadManager.get at 0x7f6088e61af0>
+          └ <__main__.PageLoadManager object at 0x7f6088e63a30>
+
+  File "page_load_manager.py", line 103, in get
+    self.web_manager.save_response_to_file()
+    │    │           └ <function PageLoadFromWeb.save_response_to_file at 0x7f6088e619d0>
+    │    └ <__main__.PageLoadFromWeb object at 0x7f6088e633d0>
+    └ <__main__.PageLoadManager object at 0x7f6088e63a30>
+
+  File "page_load_manager.py", line 89, in save_response_to_file
+    logger.debug('Save response to {file_path}', feature='f-strings')
+    │      └ <function Logger.debug at 0x7f6088e60c10>
+    └ <loguru.logger handlers=[(id=0, level=10, sink=<stderr>), (id=1, level=40, sink='error.log')]>
+
+KeyError: 'file_path'
